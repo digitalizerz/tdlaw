@@ -152,11 +152,77 @@ export function FacebookIcon({ className }: IconProps) {
   );
 }
 
+export function ColumnsIcon({ className }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width={28}
+      height={28}
+      fill="none"
+      className={iconClass(className)}
+      aria-hidden="true"
+    >
+      <path d="M4 20h16M6 8h12M7.5 8v12M12 8v12M16.5 8v12M5.5 5.5 12 3.5l6.5 2" stroke="currentColor" />
+    </svg>
+  );
+}
+
+export function GavelIcon({ className }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width={28}
+      height={28}
+      fill="none"
+      className={iconClass(className)}
+      aria-hidden="true"
+    >
+      <path d="m13.2 4.8 6 6M8.5 9.5l6 6M4.8 19.2h7.4M9.2 8.8 6.4 6a1.4 1.4 0 0 1 2-2l2.8 2.8" stroke="currentColor" />
+    </svg>
+  );
+}
+
+export function DocumentIcon({ className }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width={28}
+      height={28}
+      fill="none"
+      className={iconClass(className)}
+      aria-hidden="true"
+    >
+      <path d="M7 4.5h7.2L19 9.3V19.5H7V4.5Z" stroke="currentColor" />
+      <path d="M14.2 4.5V9.3H19M9.2 12.5h5.6M9.2 15.5h5.6" stroke="currentColor" />
+    </svg>
+  );
+}
+
+export function CarIcon({ className }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width={28}
+      height={28}
+      fill="none"
+      className={iconClass(className)}
+      aria-hidden="true"
+    >
+      <path d="M4 14.5h16l-1.2-4.2c-.2-.7-.8-1.2-1.5-1.2H6.7c-.7 0-1.3.5-1.5 1.2L4 14.5Z" stroke="currentColor" />
+      <path d="M4 14.5v3h2.2V19a1.2 1.2 0 0 0 2.4 0v-1.5h6.8V19a1.2 1.2 0 0 0 2.4 0v-1.5H20v-3" stroke="currentColor" />
+    </svg>
+  );
+}
+
 const icons = {
   shield: ShieldIcon,
   target: TargetIcon,
   people: PeopleIcon,
   scales: ScalesIcon,
+  columns: ColumnsIcon,
+  gavel: GavelIcon,
+  document: DocumentIcon,
+  car: CarIcon,
 };
 
 export function LineIcon({

@@ -5,6 +5,7 @@ import { EditorialHero } from "@/components/EditorialHero";
 import { RequestConsultBand } from "@/components/RequestConsultBand";
 import { Reveal } from "@/components/Reveal";
 import { practiceAreas } from "@/lib/content";
+import { photos } from "@/lib/images";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -14,11 +15,11 @@ export const metadata: Metadata = {
 };
 
 const visuals = [
-  { src: "/images/columns.jpg", position: "center 15%", aspect: "aspect-[4/5] lg:min-h-[520px]" },
-  { src: "/images/houston.jpg", position: "center 40%", aspect: "aspect-[16/10] lg:min-h-[380px]" },
-  { src: "/images/hero-visual.jpg", position: "72% 35%", aspect: "aspect-[5/4] lg:min-h-[420px]" },
-  { src: "/images/columns.jpg", position: "20% 70%", aspect: "aspect-[3/4] lg:min-h-[480px]" },
-  { src: "/images/houston.jpg", position: "center 85%", aspect: "aspect-[16/9] lg:min-h-[360px]" },
+  { src: photos.desk.src, alt: photos.desk.alt, position: "center 40%", aspect: "aspect-[4/5] lg:min-h-[520px]" },
+  { src: photos.stoneFacade.src, alt: photos.stoneFacade.alt, position: "center 30%", aspect: "aspect-[16/10] lg:min-h-[380px]" },
+  { src: photos.residence.src, alt: photos.residence.alt, position: "center 40%", aspect: "aspect-[5/4] lg:min-h-[420px]" },
+  { src: photos.sittingRoom.src, alt: photos.sittingRoom.alt, position: "center 45%", aspect: "aspect-[3/4] lg:min-h-[480px]" },
+  { src: photos.cityDusk.src, alt: photos.cityDusk.alt, position: "center 50%", aspect: "aspect-[16/9] lg:min-h-[360px]" },
 ] as const;
 
 export default function PracticeAreasPage() {
@@ -68,7 +69,7 @@ export default function PracticeAreasPage() {
                 <div className={cn("group relative overflow-hidden", visual.aspect)}>
                   <Image
                     src={visual.src}
-                    alt=""
+                    alt={visual.alt}
                     fill
                     className="photo object-cover"
                     style={{ objectPosition: visual.position }}

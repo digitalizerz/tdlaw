@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ClockIcon, MailIcon, PhoneIcon, PinIcon } from "@/components/icons";
 import { ContactForm } from "@/components/ContactForm";
 import { SectionEyebrow } from "@/components/SectionEyebrow";
+import { photos } from "@/lib/images";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -46,6 +48,17 @@ export default function ContactPage() {
             </p>
           </div>
         </div>
+      </section>
+
+      <section className="relative h-[42vh] min-h-[280px] overflow-hidden">
+        <Image
+          src={photos.houstonSkyline.src}
+          alt={photos.houstonSkyline.alt}
+          fill
+          className="photo object-cover"
+          sizes="100vw"
+          priority
+        />
       </section>
 
       <section>

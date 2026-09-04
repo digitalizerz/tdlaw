@@ -8,6 +8,7 @@ import { SectionEyebrow } from "@/components/SectionEyebrow";
 import { SectionNumber } from "@/components/SectionNumber";
 import { ValuesGrid } from "@/components/ValuesGrid";
 import { attorney, firmCopy } from "@/lib/content";
+import { photos } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -47,8 +48,8 @@ export default function AboutPage() {
           </div>
           <div className="group relative aspect-[4/5] w-full min-h-[320px] translate-y-2 lg:min-h-[560px] lg:translate-x-4">
             <Image
-              src="/images/columns.jpg"
-              alt="Classical stone columns"
+              src={photos.courthouse.src}
+              alt={photos.courthouse.alt}
               fill
               className="photo object-cover"
               style={{ objectPosition: "center 20%" }}
@@ -85,8 +86,8 @@ export default function AboutPage() {
             </div>
           </div>
           <FramedImage
-            src="/images/houston.jpg"
-            alt="Houston street view"
+            src={photos.cityStreet.src}
+            alt={photos.cityStreet.alt}
             objectPosition="center 35%"
             className="min-h-[360px] lg:min-h-[480px]"
           />
@@ -98,10 +99,10 @@ export default function AboutPage() {
       <section id="managing-attorney" className="bg-navy text-white">
         <div className="site-container grid items-center gap-12 section-y lg:grid-cols-2 lg:gap-20">
           <FramedImage
-            src="/images/hero-visual.jpg"
-            alt="Placeholder for Taylor D. Armstrong portrait"
+            src={photos.readingRoom.src}
+            alt={photos.readingRoom.alt}
             offset="top-left"
-            objectPosition="68% 30%"
+            objectPosition="center 40%"
             className="min-h-[420px] lg:min-h-[520px]"
           />
           <div>

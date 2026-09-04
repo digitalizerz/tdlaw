@@ -49,7 +49,7 @@ export function TestimonialFeature() {
         <div className="relative min-h-[280px] lg:min-h-full">
           <div
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url(/images/houston.jpg)" }}
+            style={{ backgroundImage: "url(/images/reading-room.jpg)" }}
             aria-hidden="true"
           />
         </div>

@@ -1,7 +1,6 @@
+import Link from "next/link";
 import { MailIcon, PhoneIcon, PinIcon } from "@/components/icons";
 import { ContactForm } from "@/components/ContactForm";
-import { SectionEyebrow } from "@/components/SectionEyebrow";
-import { SectionNumber } from "@/components/SectionNumber";
 import { contactIntro } from "@/lib/content";
 import { site } from "@/lib/site";
 
@@ -38,7 +37,7 @@ export function ConsultationCTA({ variant = "trio" }: ConsultationCTAProps) {
           <div className="relative min-h-[420px] overflow-hidden px-6 py-14 text-white sm:px-10 lg:px-14 lg:py-20">
             <div
               className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: "url(/images/houston.jpg)" }}
+              style={{ backgroundImage: "url(/images/office-glass.jpg)" }}
               aria-hidden="true"
             />
             <div className="absolute inset-0 bg-navy/55" aria-hidden="true" />
@@ -64,33 +63,34 @@ export function ConsultationCTA({ variant = "trio" }: ConsultationCTAProps) {
 
   return (
     <section aria-labelledby="contact-heading">
-      <div className="grid lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)_minmax(0,1.15fr)]">
+      <div className="grid lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.15fr)_minmax(0,0.95fr)]">
         <div className="relative min-h-[280px] overflow-hidden lg:min-h-full">
           <div
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url(/images/houston.jpg)" }}
+            style={{ backgroundImage: "url(/images/houston-skyline.jpg)" }}
             aria-hidden="true"
           />
         </div>
         <div className="bg-navy px-6 py-14 text-white sm:px-10 lg:px-12 lg:py-16">
-          <div className="mb-6 flex items-end gap-4">
-            <SectionNumber>04</SectionNumber>
-            <SectionEyebrow className="mb-1">Contact</SectionEyebrow>
-          </div>
           <h2
             id="contact-heading"
             className="max-w-md font-serif text-4xl leading-tight text-white md:text-5xl"
           >
-            Start with a
-            <br />
-            strong defense.
+            Let’s build your
+            <span className="italic text-bronze"> defense.</span>
           </h2>
-          <p className="mt-5 text-white/75">{contactIntro.availability}</p>
+          <p className="mt-5 text-white/75">Feel free to schedule a consultation.</p>
           {details}
         </div>
-        <div className="bg-bronze px-6 py-14 sm:px-10 lg:px-12 lg:py-16">
-          <ContactForm />
-        </div>
+        <Link
+          href="/contact/"
+          className="group flex min-h-[240px] flex-col items-center justify-between bg-bronze px-8 py-12 text-white"
+        >
+          <span className="inline-flex h-16 w-16 items-center justify-center rounded-full border border-white/70 text-2xl transition-transform duration-300 group-hover:translate-x-1">
+            →
+          </span>
+          <span className="eyebrow text-center">Request a consultation</span>
+        </Link>
       </div>
     </section>
   );

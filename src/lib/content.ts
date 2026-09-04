@@ -38,24 +38,28 @@ export const credibilityItems = [
   {
     title: "Relentless Preparation",
     icon: "shield",
+    teaser: "We thoroughly prepare each case.",
     description:
       "We thoroughly prepare each case to give you all available legal options.",
   },
   {
     title: "Strategic Advocacy",
     icon: "target",
+    teaser: "From arrest through trial and beyond.",
     description:
       "From arrest through trial and beyond, we are ready to defend your rights.",
   },
   {
     title: "Personalized Attention",
     icon: "people",
+    teaser: "Personalized care at every step.",
     description:
       "Our personalized care and attention to detail at every step will be second to none.",
   },
   {
     title: "Experienced Representation",
     icon: "scales",
+    teaser: "Experience at every stage of litigation.",
     description:
       "Taylor has experience managing cases at every stage of litigation in state and federal courts.",
   },

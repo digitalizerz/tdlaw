@@ -317,3 +317,39 @@ textarea {
 .field-light:focus {
   border-color: var(--td-bronze);
 }
+
+.btn-bronze {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--td-bronze);
+  color: var(--td-white);
+  padding: 0.95rem 1.35rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  transition: background-color 200ms ease;
+}
+
+.btn-bronze:hover {
+  background: var(--td-bronze-deep);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: 1px solid var(--td-navy);
+  background: var(--td-white);
+  color: var(--td-navy);
+  padding: 0.85rem 1.25rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+.btn-outline:hover {
+  background: var(--td-navy);
+  color: var(--td-white);
+}

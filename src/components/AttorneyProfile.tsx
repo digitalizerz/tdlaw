@@ -7,7 +7,7 @@ export function AttorneyProfile() {
     <div className="relative min-h-[560px] overflow-hidden bg-navy lg:min-h-full">
       <div
         className="absolute inset-0 bg-cover bg-[center_20%]"
-        style={{ backgroundImage: "url(/images/columns.jpg)" }}
+        style={{ backgroundImage: "url(/images/library.jpg)" }}
         aria-hidden="true"
       />
       <div className="absolute inset-0 bg-navy/55" aria-hidden="true" />

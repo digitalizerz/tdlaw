@@ -1,54 +1,53 @@
+import Image from "next/image";
 import Link from "next/link";
-import { AttorneyProfile } from "@/components/AttorneyProfile";
 import { ConsultationCTA } from "@/components/ConsultationCTA";
 import { CredibilityBand } from "@/components/CredibilityBand";
-import { PracticeAreaList } from "@/components/PracticeAreaList";
+import { PracticeAreaCards } from "@/components/PracticeAreaCards";
 import { Reveal } from "@/components/Reveal";
-import { SectionEyebrow } from "@/components/SectionEyebrow";
-import { SlicedPortrait } from "@/components/SlicedPortrait";
 import { TestimonialBand } from "@/components/TestimonialBand";
-import { firmCopy } from "@/lib/content";
+import { photos } from "@/lib/images";
 import { site } from "@/lib/site";
 
 export default function HomePage() {
   return (
     <>
-      <section className="relative overflow-hidden bg-offwhite">
-        <span
-          className="pointer-events-none absolute top-0 bottom-0 left-[max(1.25rem,calc((100%-1360px)/2+1.5rem))] hidden w-px bg-bronze/25 lg:block"
-          aria-hidden="true"
-        />
-        <div className="site-container grid items-end gap-10 pt-20 pb-0 lg:grid-cols-[0.95fr_1.05fr] lg:gap-8 lg:pt-28">
-          <div className="pb-16 lg:pb-28">
-            <SectionEyebrow className="reveal">{site.address.city}</SectionEyebrow>
-            <h1 className="reveal reveal-delay-1 mt-6 font-serif text-[4.6rem] leading-[0.86] text-navy sm:text-8xl lg:text-[8rem]">
+      <section className="relative overflow-hidden bg-navy text-white">
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-full lg:w-[58%]">
+          <Image
+            src={photos.heroGavel.src}
+            alt={photos.heroGavel.alt}
+            fill
+            priority
+            className="object-cover object-[center_right]"
+            sizes="(min-width: 1024px) 58vw, 100vw"
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(90deg, var(--td-navy) 0%, rgba(11,22,44,0.88) 36%, rgba(11,22,44,0.28) 70%, rgba(11,22,44,0.08) 100%)",
+            }}
+          />
+        </div>
+        <div className="site-container relative grid min-h-[78vh] items-center py-20 lg:min-h-[86vh] lg:grid-cols-[1.05fr_0.95fr] lg:py-28">
+          <div className="max-w-xl">
+            <h1 className="reveal font-serif text-6xl leading-[0.9] sm:text-7xl lg:text-[5.6rem]">
               The Strong
-              <span className="block italic text-bronze">Defense</span>
+              <span className="mt-1 block italic text-bronze">Defense</span>
             </h1>
-            <div className="rule mt-8 w-20" />
-            <div className="reveal reveal-delay-2 mt-9 max-w-md space-y-3 text-[1.15rem] leading-8 text-navy/85">
-              {firmCopy.heroLines.map((line) => (
-                <p key={line}>{line}</p>
-              ))}
+            <p className="reveal reveal-delay-1 mt-8 max-w-md text-base leading-8 text-white/80">
+              Our clients are our top priority. We work tirelessly and are on
+              call 24/7.
+            </p>
+            <div className="reveal reveal-delay-2 mt-10 flex flex-wrap items-center gap-5">
+              <Link href="/contact/" className="btn-bronze">
+                Request a consultation
+                <span aria-hidden="true">→</span>
+              </Link>
+              <a href={site.phoneHref} className="eyebrow text-bronze">
+                {site.phone}
+              </a>
             </div>
-            <Link
-              href="/contact/"
-              className="group mt-12 inline-flex items-center gap-4"
-            >
-              <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-navy text-white transition-transform duration-500 group-hover:translate-x-1.5">
-                →
-              </span>
-              <span className="flex flex-col">
-                <span className="eyebrow text-navy">Request a consultation</span>
-                <span className="mt-1 text-sm text-td-muted">{site.phone}</span>
-              </span>
-            </Link>
-          </div>
-          <div className="reveal reveal-delay-3 lg:translate-x-6 lg:translate-y-4">
-            <SlicedPortrait
-              src="/images/hero-visual.jpg"
-              alt="Architectural legal imagery for T.D. Armstrong Law Firm"
-            />
           </div>
         </div>
       </section>
@@ -56,14 +55,9 @@ export default function HomePage() {
       <Reveal>
         <CredibilityBand />
       </Reveal>
-
       <Reveal>
-        <section className="grid lg:grid-cols-[minmax(0,0.4fr)_minmax(0,0.6fr)]">
-          <PracticeAreaList />
-          <AttorneyProfile />
-        </section>
+        <PracticeAreaCards />
       </Reveal>
-
       <Reveal>
         <TestimonialBand />
       </Reveal>

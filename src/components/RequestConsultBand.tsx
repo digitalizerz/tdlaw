@@ -72,7 +72,7 @@ export function RequestConsultBand({
         <div className="relative min-h-[240px]">
           <div
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url(/images/houston.jpg)" }}
+            style={{ backgroundImage: "url(/images/office.jpg)" }}
             aria-hidden="true"
           />
         </div>
