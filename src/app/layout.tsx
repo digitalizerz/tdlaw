@@ -27,6 +27,13 @@ export const metadata: Metadata = {
   },
   description:
     "T.D. Armstrong Law Firm, P.C. provides civil litigation, criminal defense, estate planning, family law, and personal injury representation in Houston, Texas.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    apple: "/apple-icon.png",
+  },
   openGraph: {
     title: `${site.legalName} – ${site.tagline}`,
     description:
